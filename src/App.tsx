@@ -3,9 +3,10 @@ import { LandingPage } from './pages/LandingPage';
 import { StudentDashboard } from './pages/StudentDashboard';
 import { ReportIssuePage } from './pages/ReportIssuePage';
 import { AdminDashboard } from './pages/AdminDashboard';
+import { AdminGate } from './pages/AdminGate';
 
 function Router() {
-  const { view } = useApp();
+  const { view, isAdmin } = useApp();
 
   switch (view) {
     case 'student':
@@ -13,7 +14,7 @@ function Router() {
     case 'report':
       return <ReportIssuePage />;
     case 'admin':
-      return <AdminDashboard />;
+      return isAdmin ? <AdminDashboard /> : <AdminGate />;
     default:
       return <LandingPage />;
   }
