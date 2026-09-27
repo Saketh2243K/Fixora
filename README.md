@@ -48,3 +48,5 @@ Open the localhost URL Vite prints, normally:
 - Landing-page counts and recent reports use live Supabase data.
 - The SQL repair grants the permissions required by the RLS policies.
 - The broken `p_new_status` SQL variable was corrected to `v_new_status`.
+
+The website URL is: https://super-mochi-a9cfaa.netlify.app/
